@@ -8,6 +8,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .div-1 {
@@ -25,19 +26,27 @@ body {
     color: white;
 }
 
-#value-el {
+#input-el {
     font-size: 58px;
     font-weight: 800;
+    text-align: center;
     line-height: 38px;
     color: white;
     border: 2px solid #B295FF;
+    background: #6943FF;
     border-radius: 5px;
-    width: max-content;
-    padding: 14px 12px;
+    width: 117px;
+    height: auto;
     margin-top: 30px;
 }
 
-#cvt-el {
+#input-el::-webkit-outer-spin-button,
+#input-el::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#cvt-btn {
     background: white;
     border: none;
     border-radius: 5px;
@@ -45,6 +54,12 @@ body {
     color: #3D3D3D;
     font-weight: 500;
     margin-top: 25px;
+    transition: transform 0.15s;
+    cursor: pointer;
+}
+
+#cvt-btn:active {
+    transform: scale(0.95);
 }
 
 .div-2 {
@@ -54,7 +69,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 23.5px;
-    padding: 35px 25px;
+    padding: 28px 25px;
 }
 
 .unit-container {
@@ -63,7 +78,7 @@ body {
     align-items: center;
     background: white;
     border-top-left-radius: 5px;
-    width: 500px;
+    width: 100%;
 }
 
 .unit-container div:first-child {
